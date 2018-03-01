@@ -118,9 +118,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
-    <None Include="Resources\AboutResources.txt" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -129,14 +127,33 @@
     <Compile Include="MainActivity.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\icon.png" />
-    <AndroidResource Include="Resources\drawable\xamarin_logo.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
     <AndroidResource Include="Resources\layout\Tabbar.axml" />
     <AndroidResource Include="Resources\layout\Toolbar.axml" />
     <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\drawable\ic_launcher_foreground.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_info_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_local_drink_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_info_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_local_drink_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_info_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_local_drink_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_info_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_local_drink_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_info_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_local_drink_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher_round.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\values\ic_launcher_background.xml" />
   </ItemGroup>
   <Import Project="..\FindMyBeer\FindMyBeer.projitems" Label="Shared" Condition="Exists('..\FindMyBeer\FindMyBeer.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
