@@ -1,5 +1,5 @@
-﻿using System;
-
+﻿using System.Collections.Generic;
+using FindMyBeer.Views;
 using Xamarin.Forms;
 
 namespace FindMyBeer
@@ -8,46 +8,20 @@ namespace FindMyBeer
 	{
 		public MainPage()
 		{
-			Page itemsPage, aboutPage = null;
+			var pages = new List<Page> { new StylesPage(), new AboutPage() };
 
-			switch (Device.RuntimePlatform)
+			foreach (var page in pages)
 			{
-				case Device.iOS:
-					itemsPage = new NavigationPage(new ItemsPage())
-					{
-						Title = "Browse"
-					};
-
-					aboutPage = new NavigationPage(new AboutPage())
-					{
-						Title = "About"
-					};
-					itemsPage.Icon = "tab_feed.png";
-					aboutPage.Icon = "tab_about.png";
-					break;
-				default:
-					itemsPage = new ItemsPage()
-					{
-						Title = "Browse"
-					};
-
-					aboutPage = new AboutPage()
-					{
-						Title = "About"
-					};
-					break;
+				var navigationPage = new NavigationPage(page) { Title = page.Title, Icon = page.Icon };
+				Children.Add(navigationPage);
 			}
-
-			Children.Add(itemsPage);
-			Children.Add(aboutPage);
-
-			Title = Children[0].Title;
 		}
 
 		protected override void OnCurrentPageChanged()
 		{
 			base.OnCurrentPageChanged();
-			Title = CurrentPage?.Title ?? string.Empty;
+			Title = CurrentPage?.Title;
+			Icon = CurrentPage?.Icon;
 		}
 	}
 }
