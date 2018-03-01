@@ -38,6 +38,7 @@
       <DependentUpon>StylePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\StyleViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BeerViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
