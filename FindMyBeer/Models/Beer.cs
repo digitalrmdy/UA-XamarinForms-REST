@@ -1,8 +1,10 @@
 ﻿using System;
 using Newtonsoft.Json;
+using PropertyChanged;
 
 namespace FindMyBeer.Models
 {
+	[AddINotifyPropertyChangedInterface]
 	public class Beer
 	{
 		[JsonProperty("id")]

@@ -5,7 +5,7 @@
              x:Class="FindMyBeer.Views.StylePage" Title="{Binding Title}">
 
     <ListView ItemsSource="{Binding Beers}" IsPullToRefreshEnabled="true" RefreshCommand="{Binding ReloadBeersCommand}"
-              CachingStrategy="RecycleElementAndDataTemplate" ItemAppearing="ListView_OnItemAppearing">
+              CachingStrategy="RecycleElementAndDataTemplate" ItemAppearing="ListView_OnItemAppearing" ItemSelected="ListView_OnItemSelected">
 
         <ListView.ItemTemplate>
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -24,7 +25,16 @@ namespace FindMyBeer.ViewModels
 		{
 			Styles.Clear();
 			
-			var resultFromApi = await ApiService.GetStyles().SetIsLoading(this);
+			EntityResponse<List<Style>> resultFromApi;
+			try
+			{
+				resultFromApi = await ApiService.GetStyles().SetIsLoading(this);
+			}
+			catch (Exception)
+			{
+				return;
+			}
+			
 			if (resultFromApi.Status == Status.Failure)
 			{
 				return;

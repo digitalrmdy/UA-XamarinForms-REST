@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using FindMyBeer.ViewModels;
 using Xamarin.Forms;
+using Style = FindMyBeer.Models.Style;
 
 namespace FindMyBeer.Views
 {
@@ -15,9 +16,7 @@ namespace FindMyBeer.Views
 
 		void ListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
 		{
-			var style = e.SelectedItem as FindMyBeer.Models.Style;
-			
-			if (style == null)
+			if (!(e.SelectedItem is Style style))
 			{
 				return;
 			}

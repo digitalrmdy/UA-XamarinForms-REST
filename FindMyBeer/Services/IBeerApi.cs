@@ -15,5 +15,8 @@ namespace FindMyBeer.Services
 
 		[Get("/beers")]
 		Task<PaginatedResponse<Beer>> GetBeersByStyle(long styleId, int p = 1, string key = Constants.API_KEY);
+
+		[Get("/beers")]
+		Task<PaginatedResponse<Beer>> GetBeersByIds(string ids, string key = Constants.API_KEY);
 	}
 }

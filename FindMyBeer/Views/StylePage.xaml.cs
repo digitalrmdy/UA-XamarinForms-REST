@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using FindMyBeer.Models;
 using FindMyBeer.ViewModels;
 using Xamarin.Forms;
 
@@ -34,6 +35,17 @@ namespace FindMyBeer.Views
 			{
 				styleViewModel.LoadMoreBeersCommand.Execute(null);
 			}
+		}
+
+		void ListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+		{
+			if (!(e.SelectedItem is Beer beer))
+			{
+				return;
+			}
+			
+			((ListView) sender).SelectedItem = null;
+			Navigation.PushAsync(new BeerPage{BindingContext = new BeerViewModel(beer)}, true);
 		}
 	}
 }
