@@ -22,7 +22,7 @@ namespace FindMyBeer.Views
 			}
 
 			((ListView)sender).SelectedItem = null;
-			// TODO
+			Navigation.PushAsync(new StylePage { BindingContext = new StyleViewModel(style) }, true);
 		}
 
 		protected override void OnAppearing()
