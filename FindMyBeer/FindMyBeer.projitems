@@ -16,6 +16,18 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Available.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Beer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Category.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\EntityResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Glass.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Labels.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\PaginatedResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Srm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Status.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Style.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IBeerApi.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
