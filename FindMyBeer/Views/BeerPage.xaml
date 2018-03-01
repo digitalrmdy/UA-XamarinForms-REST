@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="FindMyBeer.Views.BeerPage"
+	Title="{Binding Beer.NameDisplay}">
+
+	<ContentPage.Resources>
+
+		<ResourceDictionary>
+
+			<Style x:Key="TitleLabelStyle"
+				TargetType="Label">
+
+				<Setter Property="FontAttributes"
+					Value="Bold" />
+
+				<Setter Property="FontSize"
+					Value="16" />
+
+			</Style>
+
+			<Style x:Key="ValueLabelStyle"
+				TargetType="Label">
+
+				<Setter Property="FontSize"
+					Value="14" />
+
+				<Setter Property="Margin"
+					Value="10,0,0,10" />
+
+			</Style>
+
+		</ResourceDictionary>
+
+	</ContentPage.Resources>
+
+	<ScrollView>
+
+		<StackLayout Orientation="Vertical"
+			Margin="20">
+
+			<Label Text="Name:"
+				Style="{StaticResource TitleLabelStyle}" />
+
+			<Label Text="{Binding Beer.NameDisplay}"
+				Style="{StaticResource ValueLabelStyle}" />
+
+			<Label Text="Status:"
+				Style="{StaticResource TitleLabelStyle}" />
+
+			<Label Text="{Binding Beer.StatusDisplay}"
+				Style="{StaticResource ValueLabelStyle}" />
+
+			<Label Text="Organic:"
+				Style="{StaticResource TitleLabelStyle}" />
+
+			<Label Text="{Binding Beer.IsOrganic}"
+				Style="{StaticResource ValueLabelStyle}" />
+
+			<Label Text="IBU:"
+				Style="{StaticResource TitleLabelStyle}" />
+
+			<Label Text="{Binding Beer.Ibu}"
+				Style="{StaticResource ValueLabelStyle}" />
+
+			<Label Text="Glass:"
+				Style="{StaticResource TitleLabelStyle}" />
+
+			<Label Text="{Binding Glass}"
+				Style="{StaticResource ValueLabelStyle}" />
+
+			<Label Text="Availability:"
+				Style="{StaticResource TitleLabelStyle}" />
+
+			<Label Text="{Binding Available}"
+				Style="{StaticResource ValueLabelStyle}" />
+
+			<Label Text="Description:"
+				Style="{StaticResource TitleLabelStyle}" />
+
+			<Label Text="{Binding Beer.Description}"
+				Style="{StaticResource ValueLabelStyle}" />
+
+		</StackLayout>
+
+	</ScrollView>
+
+</ContentPage>

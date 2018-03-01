@@ -45,7 +45,7 @@ namespace FindMyBeer.Views
 			}
 
 			((ListView)sender).SelectedItem = null;
-			// TODO
+			Navigation.PushAsync(new BeerPage { BindingContext = new BeerViewModel(beer) }, true);
 		}
 	}
 }

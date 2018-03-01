@@ -39,6 +39,9 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\StyleViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BeerViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\BeerPage.xaml.cs">
+      <DependentUpon>BeerPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
@@ -48,6 +51,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\StylePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\BeerPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
