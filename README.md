@@ -13,3 +13,8 @@ The app uses BreweryDB to show a list of beer styles and then shows your the bee
 * Xamarin.Forms
 * TabbedPage
 * ListViews with pull to refresh and infinite scrolling
+
+## Docs
+
+* Slides inside the repo
+* [Postman collection](https://www.getpostman.com/collections/6f6607bb82b79e1dc7ce)
